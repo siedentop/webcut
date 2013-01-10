@@ -1,1 +1,13 @@
-{"clips":[{"url":"images/img1.jpg"}, {"url":"images/img1.jpg"}]}
+{"clips":[
+  {"url":"images/img1.jpg", "id":0},
+  {"url":"images/img1.jpg", "id":1},
+  {"url":"images/img1.jpg", "id":2},
+  {"url":"images/img1.jpg", "id":3},
+  {"url":"images/img1.jpg", "id":4},
+  {"url":"images/img1.jpg", "id":5},
+  {"url":"images/img1.jpg", "id":6},
+  {"url":"images/img1.jpg", "id":11},
+  {"url":"images/img1.jpg", "id":12},
+  {"url":"images/img1.jpg", "id":13},
+  {"url":"images/img1.jpg", "id":14}]
+}
