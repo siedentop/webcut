@@ -10,14 +10,15 @@ $(document).ready(function(){
   setupTimeline();
 });
 
-function addThumbnail(url, id) {
-  $("#gallery").append('<a tabindex="1"><img class="thumbnail" src="' + url + '"/></a>');
+function addThumbnail(data) {
+  var img = $('<img class="thumbnail" src="' + data.url + '"/>').data("id", data.id).data("length",data.length);
+  $('<a tabindex="1"></a>').append(img).appendTo("#gallery");
 }
 
 function loadThumbnails(url) {
   $.getJSON(url, function(data) {
     $(data.clips).each( function() {
-      addThumbnail(this.url, this.id);
+      addThumbnail(this);
     });
     $(".thumbnail").draggable({containment: 'document',
                               stack:'.thumbnail',
@@ -39,7 +40,8 @@ function receiveThumbnail(event, ui) {
   console.log("Received.");
   var time = ui.offset.left;
   var url = ui.draggable.attr("src");
-  var timelineclip = {'url':url, 'time':time};
+  var length = ui.draggable.data("length")
+  var timelineclip = {'url':url, 'time':time, "length":length};
   timeline.push(timelineclip);
   // Create new timelineClip
   addClipToTimeline(timelineclip);
@@ -55,5 +57,9 @@ function setupTimeline() {
 
 // add New TimelineClip to Timeline
 function addClipToTimeline(clip) {
-  $(".timeline").append('<a class="clip"><img src="' + clip.url + '"/></a>');
+  var clipHandler =  $('<a class="clip"><img src="' + clip.url + '"/></a>');
+  clipHandler.data("length", clip.length);
+  clipHandler.width(clip.length);
+  $(".timeline").append(clipHandler);
+  console.log($(".clip").data());
 }

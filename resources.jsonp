@@ -1,13 +1,13 @@
 {"clips":[
-  {"url":"images/img1.jpg", "id":0},
-  {"url":"images/img1.jpg", "id":1},
-  {"url":"images/img1.jpg", "id":2},
-  {"url":"images/img1.jpg", "id":3},
-  {"url":"images/img1.jpg", "id":4},
-  {"url":"images/img1.jpg", "id":5},
-  {"url":"images/img1.jpg", "id":6},
-  {"url":"images/img1.jpg", "id":11},
-  {"url":"images/img1.jpg", "id":12},
-  {"url":"images/img1.jpg", "id":13},
-  {"url":"images/img1.jpg", "id":14}]
+  {"url":"images/img1.jpg", "id":0, "length":100},
+  {"url":"images/img1.jpg", "id":1, "length":50},
+  {"url":"images/img1.jpg", "id":2, "length":25},
+  {"url":"images/img1.jpg", "id":3, "length":35},
+  {"url":"images/img1.jpg", "id":4, "length":123},
+  {"url":"images/img1.jpg", "id":5, "length":500},
+  {"url":"images/img1.jpg", "id":6, "length":34},
+  {"url":"images/img1.jpg", "id":11, "length":99},
+  {"url":"images/img1.jpg", "id":12, "length":75},
+  {"url":"images/img1.jpg", "id":13, "length":300},
+  {"url":"images/img1.jpg", "id":14, "length":12}]
 }
