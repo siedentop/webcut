@@ -1,6 +1,6 @@
 .gallery{
 margin:20px auto;
-width:900px;
+width:60%;
 height:300px;
 position:relative;
 }
@@ -23,6 +23,12 @@ left:0px;
 cursor:pointer;
 }
 
+.thumbnail .length {
+  position:relative;
+  top: 0%;
+  left: 0%;
+}
+
 .timeline {
   margin:20px auto;
   width: 900px;
@@ -41,4 +47,10 @@ cursor:pointer;
 .clip img{
   height:70px;
   width:100px;
+}
+
+aside{
+  position:absolute;
+  left: 75%;
+  top: 20px;
 }
