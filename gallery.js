@@ -41,7 +41,8 @@ function receiveThumbnail(event, ui) {
   var time = ui.offset.left;
   var url = ui.draggable.attr("src");
   var length = ui.draggable.data("length")
-  var timelineclip = {'url':url, 'time':time, "length":length};
+  var id = ui.draggable.data("id");
+  var timelineclip = {'url':url, 'time':time, "length":length, "id":id};
   timeline.push(timelineclip);
   // Create new timelineClip
   addClipToTimeline(timelineclip);
@@ -59,7 +60,7 @@ function setupTimeline() {
 function addClipToTimeline(clip) {
   var clipHandler =  $('<a class="clip"><img src="' + clip.url + '"/></a>');
   clipHandler.data("length", clip.length);
-  clipHandler.width(clip.length);
+  clipHandler.attr("id", clip.id);
   $(".timeline").append(clipHandler);
-  console.log($(".clip").data());
+  $("#"+clip.id).width(clip.length);
 }
